@@ -1,0 +1,39 @@
+{
+  "name": "medistocktsapi",
+  "version": "1.0.0",
+  "description": "MediStock Apis",
+  "main": "start.ts",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "tsc",
+    "dev": "ts-node ./start.ts",
+    "start": "nodemon ./dist/start.js",
+    "prod": "npm run build && npm run start"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/SolutionsRCSTechnologies/MediStockTSApi.git"
+  },
+  "keywords": [
+    "@types/express",
+    "express",
+    "mongoose",
+    "nodemon"
+  ],
+  "author": "Subhojit Roy",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/SolutionsRCSTechnologies/MediStockTSApi/issues"
+  },
+  "homepage": "https://github.com/SolutionsRCSTechnologies/MediStockTSApi#readme",
+  "dependencies": {
+    "@types/express": "^4.16.0",
+    "@types/mocha": "^5.2.5",
+    "body-parser": "^1.18.3",
+    "express": "^4.16.3",
+    "mongoose": "^5.2.9",
+    "nodemon": "^1.18.3",
+    "ts-node": "^7.0.1",
+    "typescript": "^3.0.1"
+  }
+}
