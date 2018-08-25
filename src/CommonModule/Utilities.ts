@@ -7,9 +7,9 @@ class Utility{
         output.Status = status;
         output.HasData = hasData;
         if(hasData){
-            output.Data = JSON.stringify(data);
+            output.Data = data;
         } else{
-            output.Message = JSON.stringify(msg);
+            output.Message = msg;
         }
         return output;
     }
@@ -22,10 +22,14 @@ class Utility{
 
         if(output.HasData){
             response.writeHead(output.Status,output.Content_Type);
-            response.write(output.Data);
+            if(output.Data != null){
+                response.write(JSON.stringify(output.Data));
+            } else {
+                response.write(JSON.stringify(output.DefaultMessage));
+            }
         } else{
             response.writeHead(output.Status, output.Content_Type_Msg);
-            response.write(output.Message);
+            response.write(JSON.stringify(output.Message));
         }
 
         return response.end();
